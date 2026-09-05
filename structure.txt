@@ -1,0 +1,32 @@
+mis-project/
+│
+├── backend/                # Server-side code
+│   ├── app.js              # Main backend entry (Node.js/Express example)
+│   ├── routes/             # API endpoints
+│   ├── controllers/        # Business logic
+│   ├── models/             # Database models (ORM or raw SQL)
+│   ├── config/             # DB connection, environment variables
+│   └── tests/              # Backend unit tests
+│
+├── frontend/               # Client-side code
+│   ├── public/             # Static assets (images, icons)
+│   ├── src/                # React/Vue/HTML-CSS-JS files
+│   │   ├── components/     # UI components (buttons, forms, dashboards)
+│   │   ├── pages/          # Full pages (login, reports, admin panel)
+│   │   ├── services/       # API calls to backend
+│   │   └── styles/         # CSS/SCSS files
+│   └── tests/              # Frontend unit tests
+│
+├── database/               # Database-related files
+│   ├── schema.sql          # SQL schema (tables, constraints)
+│   ├── seed.sql            # Demo data for testing
+│   └── migrations/         # Versioned DB changes
+│
+├── docs/                   # Documentation
+│   ├── ERD.png             # Entity Relationship Diagram
+│   ├── use_cases.md        # Use case descriptions
+│   └── project_report.md   # Final project write-up
+│
+├── .env                    # Environment variables (DB credentials, secrets)
+├── README.md               # Project overview & setup instructions
+└── package.json            # Dependencies (backend/frontend if Node.js)
