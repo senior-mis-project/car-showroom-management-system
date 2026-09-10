@@ -1,8 +1,15 @@
 CREATE TABLE cars (
   id SERIAL PRIMARY KEY,
-  model VARCHAR(100),
-  price NUMERIC(10,2)
+  model VARCHAR(100) NOT NULL,
+  price NUMERIC(10,2) NOT NULL,
+  year INT,
+  engine VARCHAR(100),
+  mileage INT,
+  transmission VARCHAR(50),
+  image TEXT,
+  description TEXT
 );
+
 
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
