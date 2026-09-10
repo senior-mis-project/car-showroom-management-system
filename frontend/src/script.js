@@ -23,10 +23,27 @@
 // });
 
 async function loadCars() {
-  const response = await fetch("http://localhost:3000/cars");
-  const cars = await response.json();
-  const list = document.getElementById("car-list");
-  list.innerHTML = cars.map(c => `<li>${c.model} - $${c.price}</li>`).join("");
+  try {
+    const response = await fetch("/api/cars"); // calls Express API
+    const cars = await response.json();
+
+    const container = document.getElementById("car-container");
+    container.innerHTML = ""; // clear old content
+
+    cars.forEach((car) => {
+      const card = document.createElement("div");
+      card.className = "car-card";
+      card.innerHTML = `
+        <img src="/public/${car.image}" alt="${car.model}" />
+        <h3>${car.model}</h3>
+        <p>السعر: ${car.price} جنيه</p>
+        <a href="car-detail.html?id=${car.id}">تفاصيل</a>
+      `;
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error("Error loading cars:", err);
+  }
 }
 
 async function addCustomer() {
@@ -35,10 +52,9 @@ async function addCustomer() {
   await fetch("http://localhost:3000/customers", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, phone })
+    body: JSON.stringify({ name, phone }),
   });
   alert("Customer added!");
 }
 
 loadCars();
-

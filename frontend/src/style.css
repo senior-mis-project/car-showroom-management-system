@@ -18,6 +18,7 @@ header {
 
 header .logo {
   height: 60px;
+  border-radius: 50%;
 }
 
 header nav ul {
@@ -78,15 +79,16 @@ header nav ul li a:hover {
   border-radius: 12px;
   overflow: hidden;
   width: 280px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   cursor: pointer;
 }
-
 /* تأثير الفارة: تطلع لفوق */
 .car-card:hover {
   transform: translateY(-15px); /* تطلع لفوق */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .car-card img {
@@ -118,6 +120,13 @@ header nav ul li a:hover {
   background: #be123c;
 }
 
+#car-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
 /* تأثير Scroll Animation */
 .animate-up {
   opacity: 0;
@@ -138,3 +147,56 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
+/* Car detail layout */
+.car-detail {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.car-detail img {
+  width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.car-info {
+  flex: 1;
+}
+
+.car-info h2 {
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.car-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Specs table */
+.specs {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs th,
+.specs td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.specs th {
+  background: #f3f4f6;
+  width: 150px;
+  color: #111;
+}
+
