@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const host = '0.0.0.0';
+const host = "0.0.0.0";
 const carroutes = require("./routes/cars");
 const customerroutes = require("./routes/customers");
 const employeeroutes = require("./routes/employees");
 const saleroutes = require("./routes/sales");
+const authroutes = require("./routes/auth");
 const path = require("path");
 
 app.use(express.json()); // to handle json requests
@@ -14,6 +15,7 @@ app.use("/api", carroutes);
 app.use("/api", customerroutes);
 app.use("/api", employeeroutes);
 app.use("/api", saleroutes);
+app.use("/api", authroutes);
 
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, "../frontend/src")));
@@ -31,6 +33,10 @@ app.get("/cars", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/src/cars.html"));
 });
 
-app.listen(port,host, () => {
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/src/login.html"));
+});
+
+app.listen(port, host, () => {
   console.log(`server running at http://${host}:${port}`);
 });
