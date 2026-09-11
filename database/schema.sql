@@ -14,13 +14,17 @@ CREATE TABLE cars (
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100),
-  phone VARCHAR(20)
+  phone VARCHAR(20),
+  username VARCHAR(50) UNIQUE,
+  password VARCHAR(255)
 );
 
 CREATE TABLE employees (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
-  role VARCHAR(50) NOT NULL
+  role VARCHAR(50) NOT NULL,
+  username VARCHAR(50) UNIQUE,
+  password VARCHAR(255)
 );
 
 CREATE TABLE sales (

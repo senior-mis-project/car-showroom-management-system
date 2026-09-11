@@ -9,16 +9,16 @@ INSERT INTO cars (model, price,image, year, engine, mileage, transmission, descr
   ('Chevrolet Malibu', 28000,'2021-chevrolet-malibu-sedan.jpg', 2021, '2.5L Petrol', 10000, 'Automatic', 'سيارة سيدان عائلية مريحة');
 
 -- Insert demo customers
-INSERT INTO customers (name, phone) VALUES
-  ('Ali Hassan', '01012345678'),
-  ('Mona Adel', '01198765432'),
-  ('Karim Fathy', '01234567890');
+INSERT INTO customers (name, phone,username,password) VALUES
+  ('Ali Hassan', '01012345678', 'ali', 'cust123'),
+  ('Mona Adel', '01198765432', 'mona', 'cust456'),
+  ('Karim Fathy', '01234567890', 'karim', 'cust789');
 
 -- Insert demo employees
-INSERT INTO employees (name, role) VALUES
-  ('Ahmed Saleh', 'Salesman'),
-  ('Sara Nabil', 'Salesman'),
-  ('Omar Khaled', 'Manager');
+INSERT INTO employees (name, role,username,password) VALUES
+  ('Ahmed Saleh', 'Salesman', 'ahmed', 'pass123'),
+  ('Sara Nabil', 'Salesman', 'sara', 'pass456'),
+  ('Omar Khaled', 'Manager', 'omar', 'pass789');
 
 -- Insert demo sales (linking cars, customers, salesmen)
 INSERT INTO sales (car_id, customer_id, salesman_id) VALUES
