@@ -1,0 +1,58 @@
+2026-09-11 16:04:13.338 EEST [23230] LOG:  starting PostgreSQL 18.2 on aarch64-unknown-linux-android, compiled by Android (13989888, +pgo, +bolt, +lto, +mlgo, based on r563880c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f06077099aa41290cdb4c5e6fa0f59349), 64-bit
+2026-09-11 16:04:13.340 EEST [23230] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-11 16:04:13.346 EEST [23230] LOG:  listening on Unix socket "/data/data/com.termux/files/usr/tmp/.s.PGSQL.5432"
+2026-09-11 16:04:13.354 EEST [23247] LOG:  database system was shut down at 2026-09-11 16:03:44 EEST
+2026-09-11 16:04:13.363 EEST [23230] LOG:  database system is ready to accept connections
+2026-09-11 16:05:34.189 EEST [23657] FATAL:  database "library" does not exist
+2026-09-11 16:05:47.726 EEST [23742] FATAL:  database "car_showroom" does not exist
+2026-09-11 16:09:13.460 EEST [23245] LOG:  checkpoint starting: time
+2026-09-11 16:10:53.542 EEST [23245] LOG:  checkpoint complete: wrote 994 buffers (6.1%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=99.979 s, sync=0.079 s, total=100.083 s; sync files=312, longest=0.005 s, average=0.001 s; distance=4686 kB, estimate=4686 kB; lsn=0/1BF7510, redo lsn=0/1BF7480
+2026-09-11 16:13:12.659 EEST [25598] ERROR:  permission denied for schema public at character 14
+2026-09-11 16:13:12.659 EEST [25598] STATEMENT:  CREATE TABLE cars (
+	  id SERIAL PRIMARY KEY,
+	  model VARCHAR(100) NOT NULL,
+	  price NUMERIC(10,2) NOT NULL,
+	  year INT,
+	  engine VARCHAR(100),
+	  mileage INT,
+	  transmission VARCHAR(50),
+	  image TEXT,
+	  description TEXT
+	);
+2026-09-11 16:13:12.662 EEST [25598] ERROR:  permission denied for schema public at character 14
+2026-09-11 16:13:12.662 EEST [25598] STATEMENT:  CREATE TABLE customers (
+	  id SERIAL PRIMARY KEY,
+	  name VARCHAR(100),
+	  phone VARCHAR(20)
+	);
+2026-09-11 16:13:12.663 EEST [25598] ERROR:  permission denied for schema public at character 14
+2026-09-11 16:13:12.663 EEST [25598] STATEMENT:  CREATE TABLE employees (
+	  id SERIAL PRIMARY KEY,
+	  name VARCHAR(100) NOT NULL,
+	  role VARCHAR(50) NOT NULL
+	);
+2026-09-11 16:13:12.665 EEST [25598] ERROR:  permission denied for schema public at character 14
+2026-09-11 16:13:12.665 EEST [25598] STATEMENT:  CREATE TABLE sales (
+	  id SERIAL PRIMARY KEY,
+	  car_id INT REFERENCES cars(id),
+	  customer_id INT REFERENCES customers(id),
+	  salesman_id INT REFERENCES employees(id),
+	  sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	);
+2026-09-11 16:14:13.644 EEST [23245] LOG:  checkpoint starting: time
+2026-09-11 16:14:14.088 EEST [23245] LOG:  checkpoint complete: wrote 4 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.410 s, sync=0.010 s, total=0.444 s; sync files=5, longest=0.006 s, average=0.002 s; distance=3 kB, estimate=4218 kB; lsn=0/1BF8460, redo lsn=0/1BF8408
+2026-09-11 16:16:00.240 EEST [25598] WARNING:  no privileges were granted for "car_showroom"
+2026-09-11 16:16:19.149 EEST [25598] ERROR:  must be owner of database car_showroom
+2026-09-11 16:16:19.149 EEST [25598] STATEMENT:  drop database car_showroom 
+	;
+2026-09-11 16:16:33.285 EEST [26309] ERROR:  cannot drop the currently open database
+2026-09-11 16:16:33.285 EEST [26309] STATEMENT:  drop database car_showroom 
+	;
+2026-09-11 16:16:46.125 EEST [23245] LOG:  checkpoint starting: immediate force wait
+2026-09-11 16:16:46.158 EEST [23245] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.002 s, total=0.033 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=3796 kB; lsn=0/1BF8B08, redo lsn=0/1BF8AB0
+2026-09-11 16:17:05.447 EEST [26564] FATAL:  database "car_showroom" does not exist
+2026-09-11 16:17:20.907 EEST [26722] FATAL:  database "car_showroom" does not exist
+2026-09-11 16:17:51.938 EEST [23245] LOG:  checkpoint starting: immediate force wait
+2026-09-11 16:17:51.975 EEST [23245] LOG:  checkpoint complete: wrote 8 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 1 recycled; write=0.007 s, sync=0.005 s, total=0.037 s; sync files=7, longest=0.001 s, average=0.001 s; distance=4370 kB, estimate=4370 kB; lsn=0/203D4D8, redo lsn=0/203D480
+2026-09-11 16:22:52.060 EEST [23245] LOG:  checkpoint starting: time
+2026-09-11 16:24:31.144 EEST [23245] LOG:  checkpoint complete: wrote 983 buffers (6.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=98.966 s, sync=0.091 s, total=99.085 s; sync files=333, longest=0.006 s, average=0.001 s; distance=4464 kB, estimate=4464 kB; lsn=0/24997F0, redo lsn=0/2499760
