@@ -10,11 +10,11 @@
   <body>
     <!-- الهيدر -->
     <header>
-      <img src="" alt="شعار معرض السيارات" class="logo" />
+      <img src="/public/1.png" alt="شعار معرض السيارات" class="logo" />
       <nav>
         <ul>
-          <li><a href="index.html">الرئيسية</a></li>
           <li><a href="cars.html">السيارات</a></li>
+          <li><a href="index.html">الرئيسية</a></li>
         </ul>
       </nav>
     </header>
@@ -23,20 +23,20 @@
     <main>
       <section class="login-card">
         <h2>تسجيل الدخول</h2>
-        <form>
+        <form id="loginForm">
           <div class="input-group">
             <label for="username">username</label>
             <input type="text" id="username" placeholder="username" required />
           </div>
-          <div class="input-group">
-            <label for="email">البريد الإلكتروني</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="example@domain.com"
-              required
-            />
-          </div>
+          <!-- <div class="input-group"> -->
+          <!--   <label for="email">البريد الإلكتروني</label> -->
+          <!--   <input -->
+          <!--     type="email" -->
+          <!--     id="email" -->
+          <!--     placeholder="example@domain.com" -->
+          <!--     required -->
+          <!--   /> -->
+          <!-- </div> -->
           <div class="input-group">
             <label for="password">كلمة المرور</label>
             <input
@@ -50,7 +50,8 @@
         </form>
       </section>
     </main>
-
+    <p id="message"></p>
+    <script src="login.js"></script>
     <!-- الفوتر -->
     <footer>
       <p>© 2026 معرض السيارات - جميع الحقوق محفوظة</p>
