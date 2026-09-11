@@ -200,13 +200,12 @@ footer {
   color: #111;
 }
 
-
 /* كارد تسجيل الدخول */
 .login-card {
   background: #fff;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 400px;
   margin: 80px auto;
@@ -262,27 +261,16 @@ footer {
 
 /* حركة الكارد */
 @keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Cairo", sans-serif;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  background: #1e1e2f;
-  color: #fff;
-}
-
-/* سايدبار */
 .sidebar {
   width: 220px;
   background: #111;
@@ -364,7 +352,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
