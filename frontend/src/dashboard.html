@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ultimate car showroom</title>
+  </head>
+  <body>
+    <!-- سايدبار -->
+    <aside class="sidebar">
+      <h2>معرض السيارات</h2>
+      <ul>
+        <li><a href="#">لوحة التحكم</a></li>
+        <li><a href="#">الحجوزات</a></li>
+        <li><a href="#">المخزون</a></li>
+        <li><a href="#">العملاء</a></li>
+        <li><a href="#">التحليلات</a></li>
+        <li><a href="#">الدردشة</a></li>
+        <li><a href="#">الكوبونات</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#">الدعم</a>
+        <a href="#">تسجيل الخروج</a>
+      </div>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+      <!-- الهيدر -->
+      <header class="dashboard-header">
+        <h1>لوحة التحكم</h1>
+      </header>
+
+      <!-- بطاقات الإحصائيات -->
+      <section class="stats-cards">
+        <div class="card">
+          <h3>إجمالي الإيرادات</h3>
+          <p>$2.48M</p>
+        </div>
+        <div class="card">
+          <h3>الحجوزات النشطة</h3>
+          <p>186</p>
+        </div>
+        <div class="card">
+          <h3>السيارات المباعة</h3>
+          <p>06</p>
+        </div>
+      </section>
+
+      <!-- قسم التحليلات -->
+      <section class="analytics">
+        <div class="chart">
+          <h2>الإحصائيات</h2>
+          <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart">
+          <h2>تقرير المبيعات</h2>
+          <canvas id="pieChart"></canvas>
+        </div>
+      </section>
+
+      <!-- أفضل السيارات مبيعاً -->
+      <section class="best-cars">
+        <h2>أفضل السيارات مبيعاً</h2>
+        <ul>
+          <li>2015 Audi A7 Sportback — $578,087</li>
+          <li>2015 Audi A7 Sport — $578,087</li>
+        </ul>
+      </section>
+
+      <!-- جدول الحجوزات الأخيرة -->
+      <section class="latest-bookings">
+        <h2>أحدث الحجوزات</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>العميل</th>
+              <th>الوقت</th>
+              <th>المبلغ</th>
+              <th>الخطة</th>
+              <th>الحالة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mr. Mario Greenfield</td>
+              <td>22 أبريل 2023 - 10:30 ص</td>
+              <td>$59.09</td>
+              <td>Basic</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>Mr. Jasper Holloway</td>
+              <td>22 أبريل 2023 - 10:30 ص</td>
+              <td>$79.09</td>
+              <td>Basic</td>
+              <td>Active</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
